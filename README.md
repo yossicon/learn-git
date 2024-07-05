@@ -125,9 +125,9 @@ Git хеширует (преобразует) инофрмацию о комми
 
 - Команда git add добавляет в staging area только текущее содержимое файла.
 
-## Жизненный цикл файла в Git
 
 ```mermaid
+%%Жизненный цикл файла в Git
 graph LR;
   untracked -- "git add" --> staged;
   staged    -- "commit"     --> tracked;
@@ -135,6 +135,17 @@ graph LR;
   modified -- "git add" --> staged;
   staged -- "Изменения" --> modified;
 ```
+## Какие состояния показывает команда git status
+
+- staged (Changes to be committed в выводе git status).
+- modified (Changes not staged for commit).
+- untracked (Untracked files).
+
+Большинство файлов в типичном проекте будут находиться в состоянии tracked (то есть закоммичены и не изменены после коммита). 
+Вы не увидите это состояние в выводе команды git status.
+
+
+
 
 # Конец ~филь~ полезной шпаргалки.
 
