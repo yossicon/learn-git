@@ -129,11 +129,11 @@ Git хеширует (преобразует) инофрмацию о комми
 
 ```mermaid
 graph LR;
-  untracked (неотслеживаемый) -- "git add" --> staged (в списке на коммит) + tracked;
-  staged (в списке на коммит) + tracked    -- "commit"     --> tracked (отслеживаемый);
-  tracked (отслеживаемый) -- "Изменения" --> modified (изменённый);
-  modified (изменённый) -- "git add" --> staged (в списке на коммит) + tracked;
-  staged (в списке на коммит) + tracked -- "Изменения" --> modified (изменённый);
+  untracked -- "git add" --> staged;
+  staged    -- "commit"     --> tracked;
+  tracked -- "Изменения" --> modified;
+  modified -- "git add" --> staged;
+  staged -- "Изменения" --> modified;
 ```
 
 # Конец ~филь~ полезной шпаргалки.
